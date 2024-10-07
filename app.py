@@ -48,10 +48,10 @@ def input_pdf_setup(uploaded_file):
 ## Streamlit App+
 
 st.set_page_config(page_title="ATS CV", page_icon="🔍")
-st.header("ATS CV")
+st.header("ATS CV Analyzer:")
 
 input_text = st.text_area("Descripción del trabajo", key="input_text")
-uploaded_file = st.file_uploader("Cargue el CV en PDF", type=["pdf"])
+uploaded_file = st.file_uploader("Cargue el CV en formato PDF", type=["pdf"])
 
 if uploaded_file is not None:
     st.write("CV cargado")
