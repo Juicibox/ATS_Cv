@@ -25,7 +25,7 @@ def get_gemini_response(input_prompt, pdf_content, job_description):
 def input_pdf_setup(uploaded_file):
     if uploaded_file is not None:
         # Convert the PDF to images
-        images = pdf2image.convert_from_bytes(uploaded_file.read(),poppler_path=r'C:\Program Files\poppler\Library\bin')
+        images = pdf2image.convert_from_bytes(uploaded_file.read())
 
         first_page = images[0]
 
@@ -47,7 +47,7 @@ def input_pdf_setup(uploaded_file):
 
 ## Streamlit App+
 
-st.set_page_config(page_title="ATS CV", page_icon="🔮")
+st.set_page_config(page_title="ATS CV", page_icon="🔍")
 st.header("ATS CV")
 
 input_text = st.text_area("Descripción del trabajo", key="input_text")
