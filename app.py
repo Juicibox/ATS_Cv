@@ -8,7 +8,7 @@ from PIL import Image
 import pdf2image
 import google.generativeai as genai
 
-st.set_page_config(page_title="Img to Text", page_icon="logo.png")
+st.set_page_config(page_title="ATS Cvs", page_icon="logo.png")
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -48,7 +48,6 @@ def input_pdf_setup(uploaded_file):
 
 ## Streamlit App+
 
-st.set_page_config(page_title="ATS CV", page_icon="🔍")
 st.header("ATS CV Analyzer:")
 
 input_text = st.text_area("Descripción del trabajo", key="input_text")
