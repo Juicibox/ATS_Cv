@@ -8,6 +8,7 @@ from PIL import Image
 import pdf2image
 import google.generativeai as genai
 
+st.set_page_config(page_title="Img to Text", page_icon="logo.png")
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
